@@ -1,0 +1,98 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    height: 100vh;
+    /* background: url('../img/png-transparent-planets-and-star-illustration-euclidean-outer-space-space-text-happy-birthday-vector-images-cartoon.png') rgb(81, 10, 148); */
+    background: url('../img/space.png') ;
+    /* background-color: rgb(10, 10, 138); */
+    position: relative;
+    animation-name: backmov;
+    animation-duration: 9s;
+    animation-fill-mode: forwards;
+    /* animation-timing-function: initial; */
+    /* animation-iteration-count: ;  */
+
+}
+
+.rocket {
+    height: 200px;
+    /* border: red solid 2px; */
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    animation-name: rocketmove;
+    animation-timing-function: initial;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation: rocketbye 2s ease-in-out 14s forwards,
+    launch 1s ease-in-out 16s forwards;
+    
+    
+}
+
+.rocketimg {
+    height: 100%;
+    transform: rotate(45deg);
+    /* border: solid yellow 2px; */
+    
+}
+.cody{
+    height: 90px;
+    position: relative;
+    top: 60%;
+    animation: codyst 2s ease-in-out infinite,
+    codymov 9s ease-in-out 4s forwards,
+    codyrocket 2s ease-in-out 12s forwards;
+    left: -20%;
+}
+
+@keyframes rocketmove{
+    0%{
+        top: 50%;
+    }
+    50%{
+        top: 40%;
+    }
+    100%{
+        top: 50%;
+    }
+}
+@keyframes backmov{
+    
+    100%{
+        background-position: 400% 0;
+    }
+}
+@keyframes codyst {
+50%{
+    top: 55%;
+}   
+}
+@keyframes codymov {
+    from{
+        left: -20%;
+    }
+    to{
+        left:22%;
+    }
+}
+@keyframes codyrocket {
+    100%{
+        left: 35%;
+        transform: scale(0);
+        
+    }
+}
+@keyframes rocketbye {
+    100%{
+        transform: rotate(-90deg);
+    }
+}
+@keyframes launch {
+    100%{
+        top: -30%;
+    }
+}
